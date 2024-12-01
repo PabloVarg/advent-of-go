@@ -3,7 +3,7 @@
     "make": "go run {}.go < {}.in > {}.out",
     "alternate": "{}.in"
   },
-  "{}.in": {
+  "*.in": {
     "alternate": "{}.go"
   }
 }
