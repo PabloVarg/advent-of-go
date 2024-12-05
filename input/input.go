@@ -29,3 +29,15 @@ func ReadIntSlice(in io.Reader) []int {
 
 	return result
 }
+
+func ReadRuneMat(in io.Reader) [][]rune {
+	s := bufio.NewScanner(in)
+	result := make([][]rune, 0)
+
+	for s.Scan() {
+		line := s.Text()
+		result = append(result, []rune(line))
+	}
+
+	return result
+}
