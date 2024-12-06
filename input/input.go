@@ -9,13 +9,16 @@ import (
 
 func ReadIntSlice(in io.Reader) []int {
 	s := bufio.NewScanner(in)
-
 	if !s.Scan() {
 		return nil
 	}
 
+	return ScanIntSlice(s, " ")
+}
+
+func ScanIntSlice(s *bufio.Scanner, sep string) []int {
 	line := s.Text()
-	parts := strings.Split(line, " ")
+	parts := strings.Split(line, sep)
 
 	result := make([]int, 0)
 	for _, part := range parts {
