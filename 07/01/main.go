@@ -30,7 +30,7 @@ func combinations(total int, nums []int, acc, i int) bool {
 	}
 
 	if i == 0 {
-		combinations(total, nums, nums[i], i+1)
+		return combinations(total, nums, nums[i], i+1)
 	}
 
 	return combinations(total, nums, acc+nums[i], i+1) ||
