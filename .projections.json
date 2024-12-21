@@ -6,5 +6,9 @@
   "*.in": {
     "make": "go run {}.go < {}.in > {}.out",
     "alternate": "{}.go"
+  },
+  "*.out": {
+    "make": "go run {}.go < {}.in > {}.out",
+    "alternate": "{}.go"
   }
 }
